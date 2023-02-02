@@ -35,6 +35,15 @@
             padding-left: 5px;
         }
     </style>
+
+@if (app()->getLocale() == 'ar')
+<link href="https://fonts.googleapis.com/css?family=Cairo:400,700" rel="stylesheet">
+<!-- Bootstrap 4 RTL -->
+<link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css">
+<!-- Custom style for RTL -->
+<link rel="stylesheet" href="{{ asset('assets/css/custom-rtl.css') }}">
+@endif
+
     @stack('page_css')
 
 </head>

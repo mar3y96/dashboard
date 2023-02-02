@@ -4,12 +4,16 @@ return [
         'display' => 'English',
         'flag-icon' => 'us'
     ],
-    'vi' => [
-        'display' => 'Tiếng việt',
-        'flag-icon' => 'vn'
+    'ar' => [
+        'display' => 'العربية',
+        'flag-icon' => 'eg'
     ],
-    'ja' => [
-        'display' => 'Japanese',
-        'flag-icon' => 'jp'
-    ]
+    // 'vi' => [
+    //     'display' => 'Tiếng việt',
+    //     'flag-icon' => 'vn'
+    // ],
+    // 'ja' => [
+    //     'display' => 'Japanese',
+    //     'flag-icon' => 'jp'
+    // ]
 ];
