@@ -6,31 +6,31 @@
 
 <!-- Name Field -->
 <div class="col-sm-12">
-    {!! Form::label('name', 'Name:') !!}
+    {!! Form::label('name', __('fields.name'). ':') !!}
     <p>{{ $permission->name }}</p>
 </div>
 
 <!-- Title Field -->
 <div class="col-sm-12">
-    {!! Form::label('title', 'Title:') !!}
+    {!! Form::label('title', __('fields.title'). ':') !!}
     <p>{{ $permission->title }}</p>
 </div>
 
 <!-- Guard Name Field -->
 <div class="col-sm-12">
-    {!! Form::label('guard_name', 'Guard Name:') !!}
+    {!! Form::label('guard_name',  __('fields.guard_name').':') !!}
     <p>{{ $permission->guard_name }}</p>
 </div>
 
 <!-- Description Field -->
 <div class="col-sm-12">
-    {!! Form::label('description', 'Description:') !!}
+    {!! Form::label('description', __('fields.description'). ':') !!}
     <p>{{ $permission->description }}</p>
 </div>
 
 <!-- Module Field -->
 <div class="col-sm-12">
-    {!! Form::label('module', 'Module:') !!}
+    {!! Form::label('module',  __('fields.module').':') !!}
     <p>{{ $permission->module }}</p>
 </div>
 

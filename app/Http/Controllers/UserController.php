@@ -2,17 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\DataTables\UserDataTable;
+use Flash;
+use Response;
+use App\Models\Role;
 use App\Http\Requests;
+use App\DataTables\UserDataTable;
+use App\Repositories\RoleRepository;
+use App\Repositories\UserRepository;
+use Illuminate\Support\Facades\Hash;
 use App\Http\Requests\CreateUserRequest;
 use App\Http\Requests\UpdateUserRequest;
-use App\Http\Requests\UpdateProfileRequest;
-use App\Repositories\UserRepository;
-use App\Repositories\RoleRepository;
-use Flash;
 use App\Http\Controllers\AppBaseController;
-use Illuminate\Support\Facades\Hash;
-use Response;
+use App\Http\Requests\UpdateProfileRequest;
 
 class UserController extends AppBaseController
 {
@@ -63,6 +64,7 @@ class UserController extends AppBaseController
         $user = $this->userRepository->create($input);
 
         $role_data = $request->get('role_data');
+        
         $user->syncRoles($role_data);
         Flash::success('User saved successfully.');
 
@@ -129,7 +131,8 @@ class UserController extends AppBaseController
 
         $user = $this->userRepository->update($request->all(), $id);
         $role_data = $request->get('role_data');
-        $user->syncRoles($role_data);
+        
+        $user->syncRoles([$role_data]);
         Flash::success('User updated successfully.');
 
         return redirect(route('users.index'));

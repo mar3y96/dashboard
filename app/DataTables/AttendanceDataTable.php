@@ -42,17 +42,17 @@ class AttendanceDataTable extends DataTable
         return $this->builder()
             ->columns($this->getColumns())
             ->minifiedAjax()
-            ->addAction(['width' => '120px', 'printable' => false, 'title' => __('datatables.bAction')])
+            ->addAction(['width' => '120px', 'printable' => false, 'title' => __('header.Action')])
             ->parameters([
                 'dom'       => 'Bfrtip',
                 'stateSave' => true,
                 'order'     => [[0, 'desc']],
                 'buttons'   => [
-                    ['extend' => 'create', 'className' => 'btn btn-default btn-sm no-corner','title' => __('datatables.bcreate')],
-                    ['extend' => 'export', 'className' => 'btn btn-default btn-sm no-corner','title' => __('datatables.bexport')],
-                    ['extend' => 'print', 'className' => 'btn btn-default btn-sm no-corner','title' => __('datatables.bprint')],
-                    ['extend' => 'reset', 'className' => 'btn btn-default btn-sm no-corner','title' => __('datatables.breset')],
-                    ['extend' => 'reload', 'className' => 'btn btn-default btn-sm no-corner','title' => __('datatables.breload')],
+                ['extend' => 'create', 'className' => 'btn btn-default btn-sm no-corner', 'title' => __('header.create')],
+                ['extend' => 'export', 'className' => 'btn btn-default btn-sm no-corner', 'title' => __('header.export')],
+                ['extend' => 'print', 'className' => 'btn btn-default btn-sm no-corner', 'title' => __('header.print')],
+                ['extend' => 'reset', 'className' => 'btn btn-default btn-sm no-corner', 'title' => __('header.reset')],
+                ['extend' => 'reload', 'className' => 'btn btn-default btn-sm no-corner', 'title' => __('header.reload')],
                 ],
                 'language' => __('datatables')
             ]);
@@ -68,11 +68,11 @@ class AttendanceDataTable extends DataTable
         return [
             'id' => ['searchable' => false],
             'ip',
-            'user_name' => ['title' => __('models/attendances.fields.user_id'), 'data' => 'user_name', 'name' => 'user.name'],
-            'present' => ['title' => __('models/attendances.fields.user_id')],
-            'day' => ['title' => __('models/attendances.fields.day'), 'data' => 'day_text', 'name' => 'day'],
-            'time_in' => ['title' => __('models/attendances.fields.time_in')],
-            'time_out' => ['title' => __('models/attendances.fields.time_out')]
+            'user_name' => ['title' => __('fields.user_id'), 'data' => 'user_name', 'name' => 'user.name'],
+            'present' => ['title' => __('fields.user_id')],
+            'day' => ['title' => __('fields.day'), 'data' => 'day_text', 'name' => 'day'],
+            'time_in' => ['title' => __('fields.time_in')],
+            'time_out' => ['title' => __('fields.time_out')]
         ];
     }
 

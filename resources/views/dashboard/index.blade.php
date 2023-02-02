@@ -10,8 +10,8 @@
             </div><!-- /.col -->
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="">Home</a></li>
-                    <li class="breadcrumb-item active">Dashboard</li>
+                    <li class="breadcrumb-item"><a href="">{{ __('header.Home') }}</a></li>
+                    <li class="breadcrumb-item active">{{ __('header.Dashboard') }}</li>
                 </ol>
             </div><!-- /.col -->
         </div><!-- /.row -->
@@ -30,7 +30,7 @@
                         <i class="fas fa-users"></i></span>
 
                     <div class="info-box-content">
-                        <span class="info-box-text">Users</span>
+                        <span class="info-box-text">{{ __('header.Users') }}</span>
                         <span class="info-box-number">
                             {{$dashboardInfo['user_count']}}
                         </span>
@@ -46,7 +46,7 @@
                         <i class="fas fa-user-shield"></i>
                     </span>
                     <div class="info-box-content">
-                        <span class="info-box-text">Roles</span>
+                        <span class="info-box-text">{{ __('header.Roles') }}</span>
                         <span class="info-box-number">
                             {{$dashboardInfo['user_count']}}
                         </span>
@@ -67,7 +67,7 @@
                     </span>
 
                     <div class="info-box-content">
-                        <span class="info-box-text">Perrmisons</span>
+                        <span class="info-box-text">{{ __('header.Permissions') }}</span>
                         <span class="info-box-number">
                             {{$dashboardInfo['permission_count']}}
                         </span>
@@ -99,7 +99,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h5 class="card-title">User checkin/out</h5>
+                        <h5 class="card-title">{{ __('common.module.attendances') }}</h5>
 
                         <div class="card-tools">
                             <button type="button" class="btn btn-tool" data-card-widget="collapse">

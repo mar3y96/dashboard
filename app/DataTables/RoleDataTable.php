@@ -42,18 +42,18 @@ class RoleDataTable extends DataTable
         return $this->builder()
             ->columns($this->getColumns())
             ->minifiedAjax()
-            ->addAction(['width' => '120px', 'printable' => false, 'title' => __('datatables.bAction')])
+            ->addAction(['width' => '120px', 'printable' => false, 'title' => __('header.Action')])
             ->parameters([
                 'dom'       => 'Bfrtip',
                 'stateSave' => false,
                 'order'     => [[0, 'desc']],
                 'buttons'   => [
 
-                    ['extend' => 'create', 'className' => 'btn btn-default btn-sm no-corner','title' => __('datatables.bcreate')],
-                    ['extend' => 'export', 'className' => 'btn btn-default btn-sm no-corner','title' => __('datatables.bexport')],
-                    ['extend' => 'print', 'className' => 'btn btn-default btn-sm no-corner','title' => __('datatables.bprint')],
-                    ['extend' => 'reset', 'className' => 'btn btn-default btn-sm no-corner','title' => __('datatables.breset')],
-                    ['extend' => 'reload', 'className' => 'btn btn-default btn-sm no-corner','title' => __('datatables.breload')],
+                ['extend' => 'create', 'className' => 'btn btn-default btn-sm no-corner', 'title' => __('header.create')],
+                ['extend' => 'export', 'className' => 'btn btn-default btn-sm no-corner', 'title' => __('header.export')],
+                ['extend' => 'print', 'className' => 'btn btn-default btn-sm no-corner', 'title' => __('header.print')],
+                ['extend' => 'reset', 'className' => 'btn btn-default btn-sm no-corner', 'title' => __('header.reset')],
+                ['extend' => 'reload', 'className' => 'btn btn-default btn-sm no-corner', 'title' => __('header.reload')],
                 ],
                 'language' => __('datatables')
             ]);
@@ -68,10 +68,11 @@ class RoleDataTable extends DataTable
     {
         return [
             'id' => ['searchable' => false],
-            'name',
-            'title',
-            'guard_name',
-            'description'
+            'name' => ['title' => __('fields.name'), 'data' => 'name', 'name' => 'name'],
+            'title' => ['title' => __('fields.title'), 'data' => 'title', 'name' => 'title'],
+            'guard_name' => ['title' => __('fields.title'), 'data' => 'name', 'name' => 'name'],
+            'description' => ['title' => __('fields.description'), 'data' => 'description', 'name' => 'description'],
+            
         ];
     }
 

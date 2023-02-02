@@ -27,6 +27,7 @@ class User extends Authenticatable
 
 
     public $table = 'users';
+    protected $guard_name = 'web';
 
 
     /**

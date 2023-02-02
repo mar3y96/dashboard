@@ -6,12 +6,12 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1>Profile</h1>
+                <h1>{{ __('header.Profile') }}</h1>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active">User Profile</li>
+                    <li class="breadcrumb-item"><a href="#">{{ __('header.Home') }}</a></li>
+                    <li class="breadcrumb-item active">{{ __('header.User Profile') }}</li>
                 </ol>
             </div>
         </div>
@@ -35,7 +35,7 @@
 
                         <p class="text-muted text-center">{{$user->email}}</p>
 
-                        <ul class="list-group list-group-unbordered mb-3">
+                        {{-- <ul class="list-group list-group-unbordered mb-3">
                             <li class="list-group-item">
                                 <b>Followers</b> <a class="float-right">1,322</a>
                             </li>
@@ -45,7 +45,7 @@
                             <li class="list-group-item">
                                 <b>Friends</b> <a class="float-right">13,287</a>
                             </li>
-                        </ul>
+                        </ul> --}}
                     </div>
                     <!-- /.card-body -->
                 </div>
@@ -57,7 +57,7 @@
                 <div class="card">
                     <div class="card-header p-2">
                         <ul class="nav nav-pills">
-                            <li class="nav-item"><a class="nav-link active" href="#settings" data-toggle="tab">Settings</a></li>
+                            {{-- <li class="nav-item"><a class="nav-link active" href="#settings" data-toggle="tab">Settings</a></li> --}}
                         </ul>
                     </div><!-- /.card-header -->
                     <div class="card-body">
@@ -182,7 +182,7 @@
                                 {!! Form::model($user, ['route' => ['users.updateProfile', $user->id], 'method' => 'patch']) !!}
                                 <!-- Name Field -->
                                 <div class="form-group row">
-                                    {!! Form::label('name', 'Name:',['class' => 'required col-sm-2 col-form-label']) !!}
+                                    {!! Form::label('name', __('fields.name') ,['class' => 'required col-sm-2 col-form-label']) !!}
 
                                     <div class="col-sm-10">
                                         {!! Form::text('name', null, ['class' => 'form-control']) !!}
@@ -190,21 +190,21 @@
                                 </div>
                                 <!-- Email Field -->
                                 <div class="form-group row">
-                                    {!! Form::label('email', 'Email:',['class' => 'required col-sm-2 col-form-label' ]) !!}
+                                    {!! Form::label('email', __('fields.email') ,['class' => 'required col-sm-2 col-form-label' ]) !!}
                                     <div class="col-sm-10">
                                         {!! Form::text('email', null, ['class' => 'form-control']) !!}
                                     </div>
                                 </div>
                                 <!-- Password Field -->
                                 <div class="form-group row">
-                                    {!! Form::label('password_new', 'Passowrd:',['class' => 'col-sm-2 col-form-label' ]) !!}
+                                    {!! Form::label('password_new',  __('fields.password') ,['class' => 'col-sm-2 col-form-label' ]) !!}
                                     <div class="col-sm-10">
                                         {!! Form::text('password_new', null, ['class' => 'form-control']) !!}
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="offset-sm-2 col-sm-10">
-                                        <button type="submit" class="btn btn-danger">Update</button>
+                                        <button type="submit" class="btn btn-danger">{{ __('header.update') }}</button>
                                     </div>
                                 </div>
                                 {!! Form::close() !!}

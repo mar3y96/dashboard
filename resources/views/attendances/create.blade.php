@@ -28,8 +28,8 @@
             </div>
 
             <div class="card-footer">
-                {!! Form::submit(__('models/attendances.button.save'), ['class' => 'btn btn-primary']) !!}
-                <a href="{{ route('attendances.index') }}" class="btn btn-default">@lang('models/attendances.button.cancel')</a>
+                {!! Form::submit(__('header.save'), ['class' => 'btn btn-primary']) !!}
+                <a href="{{ route('attendances.index') }}" class="btn btn-default">@lang('header.Cancel')</a>
             </div>
 
             {!! Form::close() !!}

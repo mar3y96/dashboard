@@ -6,13 +6,13 @@
 
 <!-- Name Field -->
 <div class="col-sm-12">
-    {!! Form::label('name', 'Name:') !!}
+    {!! Form::label('name', __('fields.name').':') !!}
     <p>{{ $user->name }}</p>
 </div>
 
 <!-- Email Field -->
 <div class="col-sm-12">
-    {!! Form::label('email', 'Email:') !!}
+    {!! Form::label('email', __('fields.email').':') !!}
     <p>{{ $user->email }}</p>
 </div>
 
